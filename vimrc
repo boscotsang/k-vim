@@ -603,7 +603,7 @@ function! AutoSetFileHead()
     if &filetype == 'python'
         call setline(1, "\#!/usr/bin/env python")
         call append(1, "\# encoding: utf-8")
-        call append(1, "@author: gzzengguangjun")
+        call append(2, "\# @author: gzzengguangjun")
     endif
 
     normal G
