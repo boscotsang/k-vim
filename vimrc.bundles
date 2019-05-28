@@ -286,6 +286,13 @@ if count(g:bundle_groups, 'beta')
 
 endif
 
+" Plug 'ambv/black'
+" let g:black_virtualenv='/home/gzzengguangjun/blackenv'
+
+command Black !black -l 88 %:p
+autocmd FileType python nnoremap <leader>y :Black<Cr>
+autocmd BufWritePost *.py execute ':Black'
+
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -878,9 +885,9 @@ endif
     " pip install yapf
     " python code format
     " format all file
-    autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
+    " autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
     " format select block
-    autocmd FileType python vnoremap <leader>y :!yapf<Cr>
+    " autocmd FileType python vnoremap <leader>y :!yapf<Cr>
 
     " Plug 'posva/vim-vue'
 
