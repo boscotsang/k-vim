@@ -604,6 +604,9 @@ function! AutoSetFileHead()
         call setline(1, "\#!/usr/bin/env python")
         call append(1, "\# encoding: utf-8")
         call append(2, "\# @author: gzzengguangjun")
+        call append(4, "from __future__ import print_function")
+        call append(5, "from __future__ import division")
+        call append(6, "from __future__ import absolute_import")
     endif
 
     normal G
